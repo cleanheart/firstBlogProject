@@ -1,0 +1,20 @@
+@media(max-width:1200px){
+  .header-area .content-wrapper{
+    justify-content: center;
+  }
+  .header-area .contact-area{
+    flex-wrap: wrap;
+  }
+  .header-area .contact-area a{
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .header-area .right-area{
+    display: none;
+  }
+}
+@media(max-width:575.90px){
+  .header-area{
+    display: none;
+  }
+}

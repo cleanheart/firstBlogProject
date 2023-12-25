@@ -1,0 +1,268 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 16px;
+  font-family:var(--font-body);
+  font-weight: 400;
+  color: var(--body-font-color);
+}
+:root{
+  --white-color:#ffffff;
+  --heading-color: #2D3663;
+  --body-font-color: rgba(45,54,99,.75);
+  --black-light: rgba(45,54,99,.1) !important;
+  --gray: #EDF3F6 !important;
+  --white: #ffffff !important;
+  --main: #47ccc8 !important;
+  --main-darker: #29aeaa !important;
+  --main-semi: rgba(71,204,200,.5) !important;
+  --second: #47ccc8 !important;
+  --red: #dc4545 !important;
+  --font-body: 'Lora', serif;
+  --font-headers:'Niramit', sans-serif;
+}
+
+h1{
+  font-size: 80px;
+}
+h2{
+  font-size: 48px;
+  line-height: 44px;
+}
+h3{
+  font-size: 36px;
+}
+h4{
+  font-size: 24px;
+  line-height: 31.2px;
+}
+h1{
+  font-size: 80px;
+}
+h6{
+  font-size: 18px;
+  line-height: 23.4px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-headers);
+  color: var(--heading-color);
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+li{
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+
+/*********** Ready CSS *************/
+.primary-color{
+  color: var(--main);
+}
+
+/*************** Header Section Start Hare *******************/
+.header-area{
+  background:var(--white);
+  padding: 20px 0 14px 0;
+}
+.header-area .content-wrapper{
+  display: flex;
+  align-items: center;
+}
+.header-area .contact-area{
+  /* max-width: 70%; */
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-area .contact-area .inner{
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+.header-area .contact-area .icon{
+  color: #ffffff;
+  font-size: 14px;
+  background: transparent;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+.header-area .contact-area .icon::before{
+  position: absolute;
+  content: "";
+  width:25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--heading-color);
+  z-index: -1;
+  left: -5px;
+  top: -3px;
+}
+.header-area .contact-area .inner-2::before{
+  left: -7px;
+}
+.header-area .contact-area .ico:before{
+  left: 7px;
+}
+.header-area .contact-area .text{
+  font-size: 14px;
+  color: var(--heading-color);
+}
+.header-area .right-area{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+.header-area .right-area a{
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.header-area .right-area .cart a{
+  position: relative;
+}
+.header-area .right-area .cart a::after{
+  position: absolute;
+  content: "1";
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+  color: var(--white);
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  left: 15px;
+  font-weight: 700;
+  background: var(--red);
+}
+.header-area .right-area a:hover{
+  color: var(--main);
+}
+/**Search Box*/
+.header-area .search-box form{
+  position: relative;
+  transition: all 1s;
+  width: 35px;
+  height: 35px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 2px solid var(--body-font-color);
+}
+.header-area .search-box form input{
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;;
+  height: 33px;
+  /* line-height: 10px; */
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 12px;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+.header-area .search-box form .search-icon{
+  margin-left: 7px;
+  margin-top: 6px;
+}
+.header-area .search-box form input .fa{
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  color: #07051a;
+  display: none;
+  text-align: center;
+  font-size: 15px;
+  transition: all 1s;
+  margin-left: 6px !important;
+}
+
+.header-area .search-box form:hover, form:valid{
+  width: 170px;
+  cursor: pointer;
+}
+.header-area .search-box  form:hover input,
+form:valid input{
+    display: block;
+}
+.header-area .search-box form:hover .fa,
+form:valid .fa{
+    background: #07051a;
+    color: white;
+}
+.header-area .search-box form a {
+  display: none;
+  position: absolute;
+  top: 50px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center; 
+  width: 100%;
+}
+.header-area .search-box form:valid a {
+  display: block;
+}
+/*************** Header Section End Hare *******************/
+
+
+/*************** Hero Section Start Hare *******************/
+.hero-area{
+  background: url(../images/hero-SLIDE_04.jpg);
+}
+.hero-area .menu-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 2px dashed var(--black-light);
+}
+.hero-area .menu-wrapper .menu-icon a{
+  font-size: 25px;
+  color:var(--red) ;
+}
+.hero-area .main-area{
+  text-align: center;
+  padding: 150px 0;
+}
+.hero-area .main-area h1{
+  font-size: 64px;
+}
+.hero-area .description{
+  color: var(--white);
+  max-width: 750px;
+  margin: 0 auto;
+}
+/*************** Hero Section End Hare *******************/
